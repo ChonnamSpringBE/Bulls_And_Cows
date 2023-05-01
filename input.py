@@ -4,11 +4,16 @@ import cow
 
 randomNum = bulls_and_cows_answer.create_answer()
 
-guessNum = list(input("Guess your number": ))
+while True:
+    guessNum = list(input("Guess your number": ))
 
-bullsCount = bulls.bulls()
-cowsCount = cow.cow()
+    bullsCount = bulls.bulls()
+    cowsCount = cow.cow()
 
-print(f'bulls: {bullsCount} cows: {cowsCount}')
+    print(f'bulls: {bullsCount} cows: {cowsCount}')
+
+    if bullsCount == 4:
+        print("성공했습니다")
+        break
 
 
